@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mwiesmueller/gulp-jade-example.git"
   },
-  "author": "Martin Wiesmüller <martin.wiesmueller@werbas-ag.com> (werbasinnotec.com)",
+  "author": "Martin Wiesmüller <martin@fa-wiesmueller.de>",
   "license": "No Licence",
   "bugs": {
     "url": "https://github.com/mwiesmueller/gulp-jade-example/issues"
