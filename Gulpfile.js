@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const jade = require('gulp-jade');
 const watch = require('gulp-watch');
+const sass = require('gulp-sass');
 
 gulp.task('renderjade', () => {
   gulp.src('./lib/**/*.jade')
@@ -10,9 +11,16 @@ gulp.task('renderjade', () => {
     .pipe(gulp.dest('./dist/'))
 });
 
+gulp.task('sass', () => {
+  gulp.src('./lib/**/*.sass')
+    .pipe(sass())
+    .pipe(gulp.dest('./dist/'))
+});
+
 gulp.task('watch', () => {
-  watch('./lib/**/*.jade', () => {
+  watch([ './lib/**/*.jade', './lib/**/*.sass'], () => {
     gulp.run('renderjade');
+    gulp.run('sass');
   });
 });
 
